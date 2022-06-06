@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Mukta+Mahee&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --theme-color-blue: #0E48F6;
+    --theme-color-white: #FFFFFF;
+    --theme-color-black: #000000;
+    --theme-color-blue-gradient: linear-gradient(90deg, #0E48F6 0%, #FFFFFF 100%);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif !important;
+    background-color: var(--theme-color-black) !important;
+}
+
+.bg-black {
+    background-color: var(--theme-color-black) !important;
+}
+
+.bg-blue {
+    background-color: var(--theme-color-blue) !important;
+}
+
+.text-black {
+    color: var(--theme-color-black) !important;
+}
+
+.text-blue {
+    color: var(--theme-color-blue) !important;
+}
+
+.large-screen-nav {
+    background-color: var(--theme-color-black);
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+    font-weight: 300;
+}
+
+.large-screen-nav .left-nav {
+    background-color: var(--theme-color-black);
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    width: 80%;
+
+}
+
+.large-screen-nav .right-nav {
+    background-color: var(--theme-color-black);
+    display: flex;
+    justify-content: flex-end;
+    margin: 0px;
+    padding: 0;
+    gap: 20px;
+    width: 20%;
+}
+
+.large-screen-nav ul li {
+    list-style: none;
+}
+
+.large-screen-nav ul li:not(.logo-link) {
+    padding-top: 12px;
+}
+
+.large-screen-nav ul li a {
+    text-decoration: none;
+    color: var(--theme-color-white);
+}
+
+.large-screen-nav .anasayfa-link {
+    border-bottom: 4px solid transparent;
+    border-image: url('@/assets/images/border.png') 5;
+    border-image-outset: 5px;
+    font-weight: 600;
+}
+
+.large-screen-nav .yasam-text {
+    font-weight: 600;
+}
+
+.large-screen-nav .atolye-text {
+    font-weight: 900;
+    background: -webkit-linear-gradient(45deg, #0E48F6 0%, #FFFFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* color:linear-gradient(90deg, #0E48F6 0%, #FFFFFF 100%); */
+}
+
+.large-screen-nav .plus-sign {
+    font-weight: 700;
+
+}
+
+.large-screen-nav .kesfet-btn {
+    background-color: var(--theme-color-blue);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 400;
+}
+
+.large-screen-nav .login-btn {
+    border: 1px solid var(--theme-color-blue);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 400;
+}
+
+.coughing-container {
+    height: 450px;
+    background-image: linear-gradient(90deg, #000000 35%, rgba(0, 0, 0, 0) 56.28%),
+        url('@/assets/images/chef.png');
+    background-repeat: no-repeat;
+    background-position: right
+}
+
+.coughing-container h2 {
+    font-size: 65px;
+    font-weight: 700;
+    line-height: 74px;
+    letter-spacing: 0em;
+    
+}
+
+.coughing-container p {
+    color: var(--theme-color-white)
+}
+
+.coughing-container h2:first-child {
+    color: var(--theme-color-white)
+}
+
+.coughing-container .abone-ol {
+    border: 2px solid var(--theme-color-white);
+    background-color: var(--theme-color-black);
+    color: var(--theme-color-white);
+    padding: 10px 20px;
+    border-radius: 8px;
+    filter: drop-shadow(0px 10px 80px #8532E6);
+}
+
+.coughing-container .abone-ol:hover {
+    background-color: var(--theme-color-blue);
+    color: var(--theme-color-white);
+}
+
+.coughing-container h2:nth-child(2) {
+    color: var(--theme-color-blue);
+    
+}
+.kesfet-container {
+    height: 450px;
+    background-image: linear-gradient(90deg, #000000 35%, rgba(0, 0, 0, 0) 56.28%),
+        url('@/assets/images/night.png');
+    background-repeat: no-repeat;
+    background-position: right
+}
+.kesfet-container p{
+    color: var(--theme-color-white)
+}
+.kesfet-container h2 {
+    color: var(--theme-color-blue);
+    font-weight: 700;
+
+}
+.kesfet-container .kesfet-btn {
+   border: none;
+   background-color: var(--theme-color-blue);
+   padding: 5px 20px;
+   border-radius: 8px;
+   color: var(--theme-color-white);
+
+}
+
+.manifesto {
+    margin-top: 140px;
+    position: relative;
+}
+
+.manifesto-text {
+    color: var(--theme-color-white);
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.manifesto-long-text {
+    color: var(--theme-color-white);
+}
+
+
+.manifesto-text {
+    position: relative;
+}
+
+.manifesto-text div {
+    border-left: 3px solid #B678FF;
+    height: 48px;
+    padding: 4px;
+    position: absolute;
+    left: -1px;
+    top: 42%;
+}
+
+.manifesto-text .yasam-atolye {
+    /* font-size: 24px; */
+    font-weight: 600;
+    margin-bottom: 0;
+    font-size: 18px;
+
+}
+
+.manifesto-text h3 {
+    margin-top: 0;
+
+}
+
+
+#manifesto-quote {
+    position: relative;
+
+}
+
+#manifesto-quote::before {
+    content: "‘";
+    font-size: 140px;
+    position: absolute;
+    left: -20px;
+    top: -28%;
+    font-family: 'Mukta Mahee', sans-serif;
+
+}
+
+#manifesto-quote::after {
+    content: ",";
+    font-size: 140px;
+    position: absolute;
+    right: -60px;
+    top: 59%;
+    font-family: 'Mukta Mahee', sans-serif;
+}
+
+#manifesto-quote p {
+    text-align: end;
+}
+
+.blur-1 {
+    padding: 30px;
+    background-color: #03C04A;
+    filter: blur(110px);
+    transform: rotate(20deg);
+    position: absolute;
+    left: -40px;
+    height: 400px;
+    width: 50px;
+    top: 600px;
+}
+
+.blur-2 {
+    padding: 30px;
+    background-color: #DA00FF;
+    filter: blur(110px);
+    transform: rotate(180deg);
+    position: absolute;
+    left: -50px;
+    height: 600px;
+    width: 50px;
+}
+
+.blur-3 {
+    background-image: linear-gradient(89deg, #DB517A 5.81%, #633EF5 98.35%);
+    filter: blur(20px);
+    position: absolute;
+    height: 600px;
+    padding: 20px;
+    padding: 30px;
+    filter: blur(100px);
+    position: absolute;
+    transform: rotate(1deg);
+    height: 600px;
+    left: -25px;
+    width: 100px;
+}
+
+.pupular-slider{
+    margin-top: 35px;
+}
