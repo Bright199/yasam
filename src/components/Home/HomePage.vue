@@ -112,7 +112,9 @@
             </div>
         </div>
 
-        <PopularEgitmler/>
+        <div>
+            <PopularEgitmler />
+        </div>
 
         <div class="container-jumbotron kesfet-container ">
             <div class="container pt-5 ">
@@ -128,16 +130,160 @@
             </div>
         </div>
 
-        <TopTen/>
+        <div>
+            <TopTen />
+        </div>
+
+        <div class="colors-2">
+            <div class="blur-1-2 blur"></div>
+            <div class="blur-2-2 blur"></div>
+            <div class="blur-3-2 blur"></div>
+        </div>
+
+        <div class="odeme-planlar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <h2 class="text-white text-center">Ödeme Planları</h2>
+                        <p class="text-center text-white">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Dolore,
+                            accusantium repudiandae aliquid
+                            doloremque ut vero quia nobis nisi tempore molestias earum, eligendi cum labore officia
+                            voluptates
+                            exercitationem, ipsa nesciunt quod.</p>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+
+                <div class="odeme-card">
+                    <div class="aylik-plan aylik-plan-1">
+                        <p>Aylik plan</p>
+                        <h4>90TL</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        <button class="aylik-plan-btn">Plan Seç</button>
+                    </div>
+                    <div class="aylik-plan aylik-plan-2">
+                        <p>Aylik plan</p>
+                        <h4>890TL</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        <button class="aylik-plan-btn">Plan Seç</button>
+                    </div>
+                    <div class="aylik-plan aylik-plan-3">
+                        <p>Aylik plan</p>
+                        <h4><span class="atoly-plan-text">Atölye</span> <span class="plan-plus-sign">+</span></h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        <button class="aylik-plan-btn">Detaylı Bilgi</button>
+                    </div>
+                </div>
+
+                <div class="nasil-calisir mt-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 nasil-text-container">
+                                <h2 class="text-white">Nasıl Çalışır?</h2>
+                                <p class="text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                    Repudiandae totam
+                                    consequatur quo neque omnis. Quam iure vitae.</p>
+                                <div class="pink-divider"></div>
+
+                                <q class="text-white">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, autem iusto
+                                    inventore, quod similique excepturi impedit itaque porro, repellendus quo odio
+                                    quaerat aspernatur ea cum unde amet. Unde, autem repudiandae?
+                                </q>
+                            </div>
+                            <div class="col-md-6 nasil-calisir-imgs">
+                                <img src="@/assets/images/phone.png" alt="phone_png" class="main">
+                                <ul class="app-links">
+                                    <li>
+                                        <router-link to="#">
+                                            <img src="@/assets/images/frame2.png" alt="Google_Play">
+                                        </router-link>
+                                    </li>
+                                    <li>
+                                        <router-link to="#">
+                                            <img src="@/assets/images/frame1.png" alt="Google_Play">
+                                        </router-link>
+                                    </li>
+                                    <li>
+                                        <router-link to="#">
+                                            <img src="@/assets/images/frame3.png" alt="Google_Play">
+                                        </router-link>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="colors-3">
+            <div class="blur-1-3 blur"></div>
+            <div class="blur-2-3 blur"></div>
+            <div class="blur-3-3 blur"></div>
+        </div>
+
+        <div>
+            <AllTeachers/>
+        </div>
+        <div>
+            <NewTeachers/>
+        </div>
+        <div>
+            <Upcoming/>
+        </div>
+        <div>
+            <BigSlider/>
+        </div>
+
+        <div class="small-cards mt-3">
+            <div class="container small-cards-container">
+                <div class="small-card small-card-1">
+                    <p>999'dan daha fazla içerik</p>
+                </div>
+                <div class="small-card small-card-2">
+                    <p>Workshoplar</p>
+                </div>
+                <div class="small-card small-card-3">
+                    <p>Canlı dersler</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <Library/>
+        </div>
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-4 p-4">
+                    <h3 class="text-white">Lorem Ipsum Dolor.</h3>
+                    <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit!</p>
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-6">
+                    <img src="@/assets/images/faces.png" alt="faces_png">
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
+import AllTeachers from './AllTeachers.vue';
 import PopularEgitmler from './PopularEgitmler.vue';
 import TopTen from './TopTen.vue';
+import NewTeachers from './NewTeachers.vue';
+import Upcoming from './Upcoming.vue';
+import BigSlider from './BigSlider.vue';
+import Library from './Library.vue';
 export default {
     name: "HomePage",
-    components: { PopularEgitmler, TopTen }
+    components: { PopularEgitmler, TopTen, AllTeachers, NewTeachers, Upcoming, BigSlider, Library }
 }
 </script>
 
