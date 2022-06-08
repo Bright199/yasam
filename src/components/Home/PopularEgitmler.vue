@@ -5,6 +5,7 @@
                 <div class="col-md-1"></div>
                 <div class="col-md-11  p-2">
                     <h5 class="text-white mb-5">Popülar Eğitmler</h5>
+<<<<<<< HEAD
                     <carousel :settings="settings">
                         <slide v-for="image in imgUrl" :key="image.id" >
                             <div class="carousel__item " :class="image.live === 'yes' ? 'liveCard' : ''">
@@ -19,6 +20,12 @@
                                         <div class="col-md-5"></div>
                                     </div>
                                 </div>
+=======
+                    <carousel :items-to-show="5" >
+                        <slide v-for="slide in 10" :key="slide">
+                            <div class="live-card slider-card">
+                                {{ slide }}
+>>>>>>> df7cdb9a78f184bd0ef52f0254c79746d567fe30
                             </div>
                         </slide>
 
@@ -72,6 +79,7 @@ export default {
 </script>
 
 <style scoped>
+<<<<<<< HEAD
 .carousel__slide {
     margin: 10px;
     height: 150px;
@@ -109,4 +117,13 @@ export default {
 
 
 
+=======
+.live-card {
+    width: 250px;
+    height: 150px;
+    border-radius: 8px;
+    margin: 10px;
+    background-color: var(--theme-color-blue);
+}
+>>>>>>> df7cdb9a78f184bd0ef52f0254c79746d567fe30
 </style>
