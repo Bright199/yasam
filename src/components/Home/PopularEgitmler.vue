@@ -5,9 +5,11 @@
                 <div class="col-md-1"></div>
                 <div class="col-md-11  p-2">
                     <h5 class="text-white mb-5">Popülar Eğitmler</h5>
-                    <carousel :items-to-show="5" class="bg-light">
+                    <carousel :items-to-show="5" >
                         <slide v-for="slide in 10" :key="slide">
-                            {{ slide }}
+                            <div class="live-card slider-card">
+                                {{ slide }}
+                            </div>
                         </slide>
 
                         <template #addons>
@@ -35,5 +37,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.live-card {
+    width: 250px;
+    height: 150px;
+    border-radius: 8px;
+    margin: 10px;
+    background-color: var(--theme-color-blue);
+}
 </style>

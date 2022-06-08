@@ -211,7 +211,7 @@
                                             <img src="@/assets/images/frame3.png" alt="Google_Play">
                                         </router-link>
                                     </li>
-                                    
+
                                 </ul>
                             </div>
                         </div>
@@ -228,16 +228,20 @@
         </div>
 
         <div>
-            <AllTeachers/>
+            <AllTeachers />
+        </div>
+        <div class="colors-6">
+            <div class="blur-2-6 blur"></div>
+            <div class="blur-1-6 blur"></div>
         </div>
         <div>
-            <NewTeachers/>
+            <NewTeachers />
         </div>
         <div>
-            <Upcoming/>
+            <Upcoming />
         </div>
         <div>
-            <BigSlider/>
+            <BigSlider />
         </div>
 
         <div class="small-cards mt-3">
@@ -253,22 +257,44 @@
                 </div>
             </div>
         </div>
-
-        <div>
-            <Library/>
+        <div class="colors-4">
+            <div class="blur-2-4 blur"></div>
+            <div class="blur-1-4 blur"></div>
         </div>
-
+        <div class="colors-5">
+            <div class="blur-2-5 blur"></div>
+            <div class="blur-1-5 blur"></div>
+        </div>
+        <div>
+            <Library />
+        </div>
+        
         <div class="container mt-5">
             <div class="row">
                 <div class="col-md-4 p-4">
                     <h3 class="text-white">Lorem Ipsum Dolor.</h3>
                     <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit!</p>
+                    <div class="mt-5">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button class="faces-kesfet-btn">Keşfet</button>
+                            </div>
+                            <div class="col-md-6">
+                                <router-link to="#" style="text-decoration: none; color: white;">Daha fazla Ogren
+                                </router-link>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-2"></div>
                 <div class="col-md-6">
                     <img src="@/assets/images/faces.png" alt="faces_png">
                 </div>
             </div>
+        </div>
+
+        <div>
+            <Footer />
         </div>
     </div>
 </template>
@@ -281,9 +307,10 @@ import NewTeachers from './NewTeachers.vue';
 import Upcoming from './Upcoming.vue';
 import BigSlider from './BigSlider.vue';
 import Library from './Library.vue';
+import Footer from './Footer.vue';
 export default {
     name: "HomePage",
-    components: { PopularEgitmler, TopTen, AllTeachers, NewTeachers, Upcoming, BigSlider, Library }
+    components: { PopularEgitmler, TopTen, AllTeachers, NewTeachers, Upcoming, BigSlider, Library, Footer }
 }
 </script>
 
