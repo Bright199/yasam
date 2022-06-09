@@ -5,7 +5,7 @@
                 <div class="col-md-1"></div>
                 <div class="col-md-11  p-2">
                     <h5 class="text-white mb-5">Top 10 Eğitim Listesi</h5>
-                    <carousel :settings="settings">
+                    <carousel :breakpoints="breakpoints">
                         <slide v-for="image in imgUrl" :key="image.id" >
                             <div class="carousel__item " :class="image.live === 'yes' ? 'liveCard' : ''">
                                 <div class="slider-card-image">
@@ -61,10 +61,24 @@ export default {
                 { id: 7, url: person2, alt_text: 'Lorem ipsum dolor sit amet.', live: 'no' },
                 { id: 8, url: personBag, alt_text: 'Lorem ipsum dolor sit amet.', live: 'no' },
             ],
-            settings: {
-                itemsToShow: 5,
-                snapAlign: 'center',
-                // mouseDrag: false
+            // settings: {
+            //     itemsToShow: 5,
+            //     snapAlign: 'center',
+            // },
+
+             breakpoints: {
+                320: {
+                    itemsToShow: 1.5,
+                    snapAlign: 'center',
+                },
+                700: {
+                    itemsToShow: 3,
+                    snapAlign: 'center',
+                },
+                1024: {
+                    itemsToShow: 5,
+                    snapAlign: 'center',
+                },
             },
         }
     },
@@ -77,7 +91,7 @@ export default {
     height: 150px;
     width: 200px;
     padding: 0;
-    background-color: blue;
+    background-color: var(--theme-color-black);
     border-radius: 10px;
 }
 

@@ -5,9 +5,8 @@
                 <div class="col-md-1"></div>
                 <div class="col-md-11  p-2">
                     <h5 class="text-white mb-5">Popülar Eğitmler</h5>
-<<<<<<< HEAD
-                    <carousel :settings="settings">
-                        <slide v-for="image in imgUrl" :key="image.id" >
+                    <carousel :breakpoints="breakpoints">
+                        <slide v-for="image in imgUrl" :key="image.id">
                             <div class="carousel__item " :class="image.live === 'yes' ? 'liveCard' : ''">
                                 <div class="slider-card-image">
                                     <img :src="image.url" alt="scrapper">
@@ -20,12 +19,6 @@
                                         <div class="col-md-5"></div>
                                     </div>
                                 </div>
-=======
-                    <carousel :items-to-show="5" >
-                        <slide v-for="slide in 10" :key="slide">
-                            <div class="live-card slider-card">
-                                {{ slide }}
->>>>>>> df7cdb9a78f184bd0ef52f0254c79746d567fe30
                             </div>
                         </slide>
 
@@ -68,62 +61,78 @@ export default {
                 { id: 7, url: person2, alt_text: 'Lorem ipsum dolor sit amet.', live: 'no' },
                 { id: 8, url: personBag, alt_text: 'Lorem ipsum dolor sit amet.', live: 'no' },
             ],
-            settings: {
-                itemsToShow: 5,
-                snapAlign: 'center',
-                // mouseDrag: false
+            // settings: {
+            //     itemsToShow: 5,
+            //     snapAlign: 'center',
+            // },
+
+            breakpoints: {
+                320: {
+                    itemsToShow: 1.5,
+                    snapAlign: 'center',
+                },
+                700: {
+                    itemsToShow: 3,
+                    snapAlign: 'center',
+                },
+                1024: {
+                    itemsToShow: 5,
+                    snapAlign: 'center',
+                },
             },
         }
     },
 }
 </script>
 
-<style scoped>
-<<<<<<< HEAD
-.carousel__slide {
+<style >
+.pupular-slider .carousel__slide {
     margin: 10px;
     height: 150px;
     width: 200px;
     padding: 0;
-    background-color: blue;
+    background-color: var(--theme-color-black);
     border-radius: 10px;
 }
 
-.carousel__item {
+.pupular-slider .carousel__item {
     position: relative;
     border-radius: 8px;
 }
 
-.carousel__item .slider-card-image {
+.pupular-slider .carousel__item .slider-card-image {
     height: 150px;
     width: 100%;
 }
 
-.carousel__slide img {
+.pupular-slider .carousel__slide img {
     width: 100%;
     height: 100%;
     border-radius: 10px
 }
 
-.carousel__slide .slider-car-alt {
+.pupular-slider .carousel__slide .slider-car-alt {
     position: absolute;
     bottom: 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
 }
 
-.liveCard {
+.pupular-slider .liveCard {
     border: .1px solid rgb(255, 44, 44)
 }
 
+.pupular-slider .carousel__prev--in-active,
+.carousel__next--in-active {
+    display: none !important;
+}
 
-
-=======
-.live-card {
+.pupular-slider .live-card {
     width: 250px;
     height: 150px;
     border-radius: 8px;
     margin: 10px;
     background-color: var(--theme-color-blue);
 }
->>>>>>> df7cdb9a78f184bd0ef52f0254c79746d567fe30
+
+@media only screen and (max-width: 1200px) {}
 </style>

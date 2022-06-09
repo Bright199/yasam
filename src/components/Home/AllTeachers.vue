@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="container-jumbotron teachers-slider m-1">
-            <carousel :settings="settings">
+        <div class="container-jumbotron teachers-slider ">
+            <carousel :settings="settings" :breakpoints="breakpoints">
                 <slide v-for="image in imgUrl" :key="image.id">
                     <div class="carousel__item ">
                         <div class="slider-card-image">
@@ -63,9 +63,22 @@ export default {
                 { id: 8, url: blackface2 }
             ],
             settings: {
-                itemsToShow: 5,
-                snapAlign: 'center',
                 mouseDrag: false
+            },
+
+            breakpoints: {
+                320: {
+                    itemsToShow: 2,
+                    snapAlign: 'center',
+                },
+                700: {
+                    itemsToShow: 3,
+                    snapAlign: 'center',
+                },
+                1024: {
+                    itemsToShow: 5,
+                    snapAlign: 'center',
+                },
             },
         }
     },
@@ -81,8 +94,8 @@ export default {
 }
 </script>
 
-<style scoped>
-.carousel__slide {
+<style >
+.teachers-slider .carousel__slide {
     margin: 10px;
     height: 320px;
     width: 230px !important;
@@ -90,29 +103,29 @@ export default {
     border-radius: 10px;
 }
 
-.carousel__item {
+.teachers-slider .carousel__item {
     position: relative;
     border-radius: 8px;
 }
 
-.carousel__item .slider-card-image {
+.teachers-slider .carousel__item .slider-card-image {
     height: 320px;
     width: 100%;
 }
 
-.carousel__slide img {
+.teachers-slider .carousel__slide img {
     width: 100%;
     height: 100%;
     border-radius: 10px
 }
 
-.carousel__slide .slider-car-alt {
+.teachers-slider .carousel__slide .slider-car-alt {
     position: absolute;
     bottom: 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
 }
 
-.liveCard {
+.teachers-slider .liveCard {
     border: .1px solid rgb(255, 44, 44)
 }
 
@@ -122,7 +135,7 @@ export default {
     margin-top: 30px;
 }
 
-.slider-nav-button .round-btn {
+.teachers-slider .slider-nav-button .round-btn {
     background-color: var(--theme-color-black);
     width: 45px;
     height: 45px;
@@ -133,61 +146,61 @@ export default {
     align-items: center;
 }
 
-.slider-nav-button .round-btn:hover {
+.teachers-slider .slider-nav-button .round-btn:hover {
     border: 3px solid #45A8EF;
     cursor: pointer;
 }
 
-.slider-nav-button .round-btn:hover .left-arrow-1 {
+.teachers-slider .slider-nav-button .round-btn:hover .left-arrow-1 {
     background: #45A8EF !important;
 }
 
-.slider-nav-button .left-arrow-3:hover+.round-btn {
+.teachers-slider .slider-nav-button .left-arrow-3:hover+.round-btn {
     border: 2px solid #45A8EF;
     cursor: pointer;
 }
 
-.slider-nav-button .left-arrow-3:hover {
+.teachers-slider .slider-nav-button .left-arrow-3:hover {
     color: #45A8EF !important;
     cursor: pointer;
 }
 
-.slider-nav-button .left-arrow-2:hover {
-    color: #45A8EF !important;
-    cursor: pointer;
-    opacity: 1;
-}
-
-.slider-nav-button .left-arrow-1:hover {
+.teachers-slider .slider-nav-button .left-arrow-2:hover {
     color: #45A8EF !important;
     cursor: pointer;
     opacity: 1;
 }
 
-.slider-nav-button .right-arrow-2:hover {
+.teachers-slider .slider-nav-button .left-arrow-1:hover {
     color: #45A8EF !important;
     cursor: pointer;
     opacity: 1;
 }
 
-.slider-nav-button .right-arrow-1:hover {
+.teachers-slider .slider-nav-button .right-arrow-2:hover {
     color: #45A8EF !important;
     cursor: pointer;
     opacity: 1;
 }
 
-.slider-nav-button .right-arrow-3:hover {
+.teachers-slider .slider-nav-button .right-arrow-1:hover {
     color: #45A8EF !important;
     cursor: pointer;
     opacity: 1;
 }
 
-.slider-nav-button .round-btn:hover .round-btn-2 {
+.teachers-slider .slider-nav-button .right-arrow-3:hover {
+    color: #45A8EF !important;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.teachers-slider .slider-nav-button .round-btn:hover .round-btn-2 {
     border: 2px solid #45A8EF;
     cursor: pointer;
 }
 
-.slider-nav-button .round-btn-2 {
+.teachers-slider .slider-nav-button .round-btn-2 {
     background-color: var(--theme-color-red);
     width: 2px;
     height: 2px;
@@ -195,24 +208,28 @@ export default {
     border: 2px solid var(--theme-color-white);
 }
 
-.slider-nav-button .left-arrow-3,
+.teachers-slider .slider-nav-button .left-arrow-3,
 .right-arrow-1 {
     margin-top: 10px;
     font-size: 25px;
 }
 
-.slider-nav-button .left-arrow-2,
-.right-arrow-2 {
+.teachers-slider .slider-nav-button .left-arrow-2,
+.teachers-slider .right-arrow-2 {
     margin-top: 13px;
     font-size: 20px;
     opacity: 0.5
 }
 
-.slider-nav-button .left-arrow-1,
-.right-arrow-3 {
+.teachers-slider .slider-nav-button .left-arrow-1,
+.teachers-slider .right-arrow-3 {
     margin-top: 15px;
     font-size: 15px;
     opacity: 0.3
 }
+
+/* .teachers-slider .carousel__prev,.carousel__next {
+    display: none !important ;
+ } */
 </style>
 

@@ -1,22 +1,43 @@
 <template>
-    <div>
-        <div class="container m-1">
+    <div class="container-jumbtron">
+        <div class="container big-slider">
             <carousel :settings="settings">
                 <slide v-for="image in imgUrl" :key="image.id">
                     <div class="carousel__item ">
-                        <div class="slider-card-image">
-                            <img :src="image.url" alt="scrapper">
+                        <div class="row overlay">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-6 overlay-content">
+                                <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, explicabo sed,
+                                    consequatur cupiditate error quod obcaecati soluta voluptates ipsam hic debitis
+                                    cumque quasi fugit quaerat, temporibus quas doloribus distinctio nobis?</p>
+                                    <h4 class="text-white">Mr Dolor Sir</h4>
+                                    <p class="text-white">CEO</p>
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                        <div class="row py-4">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-5 main-text-container">
+                                <h2 class="text-white">Hakkımızda</h2>
+                                <h3 class="text-white">Ne söylediler?</h3>
+                                <div class="left-bar"></div>
+                            </div>
+                            <div class="col-md-5 p-0">
+                                <div class="slider-image">
+                                    <img src="@/assets/images/skyscrapper.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-1"></div>
                         </div>
                     </div>
                 </slide>
 
-                <template #addons >
+                <template #addons>
                     <navigation />
+                    <pagination />
                 </template>
             </carousel>
-            
         </div>
-
     </div>
 </template>
 
@@ -68,28 +89,64 @@ export default {
 }
 </script>
 
-<style scoped>
-.carousel__slide {
-    
+<style >
+.big-slider .carousel__item{
+    position: relative;
+}
+.big-slider .carousel__item .slider-image {
+    height: 500px;
+    width: 100%;
 }
 
-.carousel__item {
-    
+.big-slider .carousel__item .slider-image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
 }
 
-.carousel__item .slider-card-image {
-    
+.big-slider .carousel__pagination-button {
+    margin: var(--vc-pgn-margin);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid var(--theme-color-white);
+    cursor: pointer;
+    background-color: var(--theme-color-black) !important;
 }
 
-.carousel__slide img {
-    
+.big-slider .carousel__pagination-button--active {
+    background-color: var(--theme-color-white) !important;
 }
 
-.carousel__slide .slider-car-alt {
-    
+.main-text-container {
+    padding-top: 65px;
+    position: relative;
 }
 
+.main-text-container .left-bar {
+    background-color: #B678FF;
+    width: 4px;
+    height: 70px;
+    top: 70px;
+    left: 120px;
+    position: absolute;
+    border-radius: 10px;
 
+}
 
+.big-slider .carousel__item .overlay{
+    position: absolute;
+    bottom: 60px;
+}
+.big-slider .carousel__item .overlay .overlay-content{
+    text-align:start;
+    background-color:#1E1E1E;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.big-slider .carousel__prev--in-active,.carousel__next--in-active {
+    display: block !important;
+}
 </style>
 

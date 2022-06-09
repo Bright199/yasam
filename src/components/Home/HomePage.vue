@@ -1,5 +1,8 @@
 <template>
     <div class=" position-relative p-0">
+        <div class="small-screen-nav">
+            
+        </div>
         <nav class="container large-screen-nav">
             <ul class="left-nav">
                 <li class="logo-link">
@@ -244,7 +247,7 @@
             <BigSlider />
         </div>
 
-        <div class="small-cards mt-3">
+        <div class="small-cards" style="margin-top: 45px">
             <div class="container small-cards-container">
                 <div class="small-card small-card-1">
                     <p>999'dan daha fazla içerik</p>
@@ -288,7 +291,7 @@
                 </div>
                 <div class="col-md-2"></div>
                 <div class="col-md-6">
-                    <img src="@/assets/images/faces.png" alt="faces_png">
+                    <img src="@/assets/images/faces.png" alt="faces_png" style="width:95%">
                 </div>
             </div>
         </div>
