@@ -832,12 +832,19 @@ body {
     border: 0;
     cursor: pointer;
 }
-
+.small-screen-nav{
+    display: none;
+}
 
 @media only screen and (max-width: 1200px) {
     .large-screen-nav {
         display: none;
     }
+
+    .small-screen-nav{
+        display: block;
+    }
+    
 
     .coughing-container {
         background-image: none;

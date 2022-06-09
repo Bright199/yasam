@@ -1,7 +1,7 @@
 <template>
     <div class=" position-relative p-0">
         <div class="small-screen-nav">
-            
+            <SmallNav/>
         </div>
         <nav class="container large-screen-nav">
             <ul class="left-nav">
@@ -311,9 +311,10 @@ import Upcoming from './Upcoming.vue';
 import BigSlider from './BigSlider.vue';
 import Library from './Library.vue';
 import Footer from './Footer.vue';
+import SmallNav from './SmallNav.vue';
 export default {
     name: "HomePage",
-    components: { PopularEgitmler, TopTen, AllTeachers, NewTeachers, Upcoming, BigSlider, Library, Footer }
+    components: { PopularEgitmler, TopTen, AllTeachers, NewTeachers, Upcoming, BigSlider, Library, Footer, SmallNav }
 }
 </script>
 
